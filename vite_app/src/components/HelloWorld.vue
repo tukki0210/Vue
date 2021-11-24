@@ -3,10 +3,10 @@
   <h1>{{data.title}}</h1>
   <p class="mt-3 h5">{{$store.state.message}}</p>
   <hr>
-  <div class="btn btn-info"
-      @click.exact="$store.commit('count')"
-      @click.ctrl="$store.commit('reset')">
-    <a class="h5">
+  <div class="alert alert-secondary"
+       @click="$store.dispatch('doit')">
+    <a class="h5" 
+      @click.stop="$store.commit('reset')">
       clicked: {{ $store.state.counter }}
     </a>
   </div>
